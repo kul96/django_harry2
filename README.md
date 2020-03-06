@@ -8,3 +8,13 @@
 
 ### create urls.py file in shop & blog folder
 > add views in views.py file
+
+### create templates/blog(or shop)  dir in blog and shop folder 
+> blog->templates->blog
+
+>shop->templates->shop
+
+### add blog and shop in list (INSTALLED_APPS=[])
+> In setting this list present 
+
+### add html file in template/blog(or shop) folder
