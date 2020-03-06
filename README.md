@@ -44,6 +44,45 @@
     change in model are occured that store in the migration .
     (jo change model m kiya h like. table ka nam change kr liya so this change only store in migration but not store in the database 'but when you apply migration that time that changes in databases applyed .(jab tk apply nhi kronge migration ko tb tk koi databases m change nhi hoga, only migration m store ho jayega wo changes.)
     
+## update
+> change in installed_app[] list(present in project1) 
+  
+    add this 'shop.apps.ShopConfig',
+    and remove 'shop
 
+## create model
+ > create model with name 'Product'(class name)
+ in shop/models.py file
 
+## make migration 
+     python manager.py makemigrations 
+## apply migration 
+      python manage.py migrate
+
+## make super Admin
+     python manage.py createsuperuser
+> set user name ,pass,etc..
+
+> goto 127.0.0.1:8000/admin
+>> data is not showing because we can't register our model so first register our model
+
+>go to shop/admin.py file
+  >> add these lines
+
+     from .models import model_name
+     admin.site.register(model_name)
+     ex.
+     from .models import Product
+     admin.site.register(Product)
+
+> got to admin page(127.0.0.1:8000/admin)
+>> now product(model) is showing
+
+>restart server then add product if error occur 
+      
+      reason 1. not do migrate process
+      reason 2. not restart the server
+
+>> NOTE - if any change in model than definitlty you have to do 'migration '     
+ 
  
